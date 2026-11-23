@@ -3,7 +3,7 @@ function sumar(a, b) {
 }
 
 // Prueba automatizada básica
-if (sumar(3, 3) !== 6) {
+if (sumar(2, 3) !== 5) {
   console.error("ERROR: La prueba de suma falló");
   process.exit(1); // Código distinto de 0 hace fallar el pipeline
 }
