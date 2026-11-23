@@ -22,13 +22,11 @@ pipeline {
         }
 
         stage('3. Pruebas (Test)') {
-            steps {
-                echo "Ejecutando suite de pruebas..."
-                sh '''
-                  echo "Validando sintaxis y lógica..."
-                  grep -q "sumar(2, 3)" app.js && echo "Test OK" || exit 1
-                '''
-            }
+         steps {
+             echo "Ejecutando suite de pruebas con Node.js..."
+             sh 'node app.js'
+         }
+     }
         }
 
         stage('4. Empaquetado (Artifact)') {
