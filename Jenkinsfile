@@ -22,11 +22,10 @@ pipeline {
         }
 
         stage('3. Pruebas (Test)') {
-         steps {
-             echo "Ejecutando suite de pruebas con Node.js..."
-             sh 'node app.js'
-         }
-     }
+            steps {
+                echo "Ejecutando suite de pruebas con Node.js..."
+                sh 'node app.js'
+            }
         }
 
         stage('4. Empaquetado (Artifact)') {
@@ -43,6 +42,10 @@ pipeline {
             echo "Pipeline completado con éxito. Artefacto generado."
         }
         failure {
+            echo "El pipeline falló. Revisa los logs de la etapa con error."
+        }
+    }
+}
             echo "El pipeline falló. Revisa los logs de la etapa con error."
         }
     }
