@@ -46,3 +46,7 @@
         }
     }
 }
+            echo "El pipeline falló. Revisa los logs de la etapa con error."
+        }
+    }
+}
